@@ -1,0 +1,36 @@
+{
+  "name": "NistBot",
+  "description":"A tool to help Nist",
+  "key": "io.nerds.nistbot",
+  "links": {
+    "homepage": "https://nitsbot.nerds.io",
+    "self": "https://nistbot.nerds.io/capabilities.json"
+  },
+  "vendor": {
+    "name": "Chip Wasson and Collin Kennedy",
+    "url": "http://nistbot.nerds.io/"
+  },
+  "capabilities": {
+    "hipchatApiConsumer": {
+      "fromName": "NistBot",
+      "scopes": [
+        "send_notification",
+        "view_room"
+      ]
+    },
+    "installable": {
+      "allowGlobal": true,
+      "allowRoom": true,
+      "callbackUrl": "https://nistbot.nerds.io/hipchat/installed",
+      "uninstalledUrl": "https://nistbot.nerds.io/hipchat/uninstalled"
+    },
+    "webhook": [{
+      "event": "room_message",
+      "pattern": "^\/nist",
+      "url": "https://nistbot.nerds.io/hipchat/message",
+      "name": "Log webhook"
+    }]
+  }
+}
+
+

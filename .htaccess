@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^hipchat/installed$ hipchatinstalled.php [L]
+RewriteRule ^hipchat/uninstalled$ hipchatuninstalled.php [L]
+RewriteRule ^hipchat/message$ hipchatmessage.php [L]
